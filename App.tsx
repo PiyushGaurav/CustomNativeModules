@@ -50,7 +50,7 @@ function App(): JSX.Element {
     );
   };
 
-  const createCalendarEventErrorPromise = async () => {
+  const createCalendarEventPromise = async () => {
     try {
       const eventId = await CalendarModule.createCalendarEventPromise(
         'Party',
@@ -80,7 +80,7 @@ function App(): JSX.Element {
         />
         <Button
           title="invoke createCalendarEventErrorPromise"
-          onPress={createCalendarEventErrorPromise}
+          onPress={createCalendarEventPromise}
         />
       </ScrollView>
     </SafeAreaView>
